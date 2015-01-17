@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<strong class="text-success">@TempData["message"]</strong>
+
+@using (Html.BeginForm("AddMessage", "ChatAdmin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <input type="submit" class="btn btn-default" value="Send Admin Message" />
+}
